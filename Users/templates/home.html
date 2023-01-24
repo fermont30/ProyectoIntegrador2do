@@ -1,8 +1,204 @@
-{% extends 'layout.html' %}
-  
-{% block title %}Inicio{% endblock %}
-  
-{% block content %}
-<h1 class="h2">Pagina Principal</h1>
-<p>Bienvenido, {{ username }}!</p>
-{% endblock %}
+<!doctype html>
+<html lang="es">
+<head meta name="viewport" content="width=device-width, initial-scale=1.0" &amp;gt;>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">         
+</head>
+<body class="fondo">
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <!-- Barra Menu -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <div class="col-md-3">                        
+                        <img class="log" src="{{ url_for('static', filename='img/logo/smartcss-logo.png') }}" alt="">
+                        <h3 class="name">SmarCss</h3>
+                    </div>
+                </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Laptops</a></li>
+                                <li><a class="dropdown-item" href="#">CPU's</a></li>
+                                <li><a class="dropdown-item" href="#">Celulares</a></li>
+                                <li><a class="dropdown-item" href="#">Monitores</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pedidos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contáctanos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('register') }}">Registrate</a>
+                        </li>
+                    </ul>                 
+                                    
+            </div>
+            <div class="col-md-3">
+                <a class="py-2 d-none d-md-inline-block" href="{{ url_for('home') }}"><i class="fas fa-home"></i> Inicio</a>
+                <a class="py-2 d-none d-md-inline-block" href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i> Perfil</a>
+                <a class="py-2 d-none d-md-inline-block" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
+            </div>
+            </div>
+        </nav>
+    <div class="container">
+        <!-- Carrucel -->
+        <div class="content-all">
+            <div class="content-carrousel">
+                
+                <figure><img src="{{ url_for('static', filename='img/index/1.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/2.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/3.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/4.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/5.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/6.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/7.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/8.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/9.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/10.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/11.png') }}" style="width: 200px;  height: 120px;"></figure>
+                <figure><img src="{{ url_for('static', filename='img/index/12.png') }}" style="width: 200px;  height: 120px;"></figure>
+            </div>
+        </div>
+        <!-- Barra flotante -->
+        <div class="sticky-container">
+            <ul class="sticky">
+                
+                <li>
+                    <img src="{{ url_for('static', filename='img/logo/facebook.png') }}" width="32" height="32">
+                    <p><a href="https://www.facebook.com/programacionnet" target="_blank">Siguenos<br>Facebook</a></p>
+                </li>
+                <li>                    
+                    <img src="{{ url_for('static', filename='img/logo/gorjeo.png') }}" width="32" height="32">
+                    <p><a href="https://twitter.com/noprog" target="_blank">Siguenos<br>Twitter</a></p>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img/logo/instagram.png') }}" width="32" height="32">
+                    <p><a href="https://www.instagram.com/" target="_blank">Siguenos<br>Instagram</a></p>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img/logo/youtube.png') }}" width="32" height="32">
+                    <p><a href="http://www.youtube.com/programacionnet" target="_blank">Siguenos<br>YouYube</a></p>
+                </li>
+            </ul>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <!-- Menu productos -->
+        <center>
+            <h3 class="itembar"
+                style="color: white; background: linear-gradient(180deg, rgba(6, 173, 0), rgb(0, 0, 0), rgb(6, 173, 0));">
+                Laptops</h3>
+        </center>
+        <div class="container-card">
+            <div class="card">
+                <figure>
+                    
+                    <img src="{{ url_for('static', filename='img/header/pro1.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Promocion</h3>
+                    <p>Laptop HP + mochila + mouse + audifonos + tablet</p>
+                    <a class="ver" href="index/laptop+mochila.html">Ver mas</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{{ url_for('static', filename='img/header/pro2.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Laptop Lenovo Legion</h3>
+                    <p>Incluye 10 obsequios</p>
+                    <br>
+                    <a class="ver" href="index/gamer-lenovo.html">Ver mas</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{{ url_for('static', filename='img/header/pro3.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>Laptop MSI</h3>
+                    <p>Incluye regalo gratis</p>
+                    <br>
+                    <a class="ver" href="index/laptopmsi.html">Ver mas</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <center>
+            <h3 class="itembar"
+                style="color: white; background: linear-gradient(180deg, rgba(6, 173, 0), rgb(0, 0, 0), rgb(6, 173, 0));">
+                CPU</h3>
+        </center>
+        <div class="container-card">
+            <div class="card">
+                <figure>
+                    <img src="{{ url_for('static', filename='img/header/pc1.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>CPU Intel Core i7</h3>
+                    <br>
+                    <p>Teclado + mouse + audifonos</p>
+                    <a class="ver" href="index/cpu-gamer.html">Ver mas</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{{ url_for('static', filename='img/header/pc2.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>CPU Gaming</h3>
+                    <p>Core i7 + Geforce RTX</p>
+                    <br>
+                    <a class="ver" href="index/ighgamer.html">Ver mas</a>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="{{ url_for('static', filename='img/header/pc3.png') }}">
+                </figure>
+                <div class="contenido-card">
+                    <h3>CPU HP Original</h3>
+                    <p>Rizen AMD</p>
+                    <br>
+                    <a class="ver" href="index/cpu-hp-original.html">Ver mas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="pie-pagina">
+        <p>info@smartcss.com</p>
+        <p>Quito - Ecuador</p>
+        <p>Integrantes: Bryan Caicedo, Alexander Ortiz, Kevin Pinsag, Lenin Montoya</p>
+    </footer>
+</body>
+
+</html>

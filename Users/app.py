@@ -54,10 +54,10 @@ def login():
                 return redirect(url_for('home'))
             else:
                 # Account doesnt exist or username/password incorrect
-                flash('Usuario Incorecto o no Existe')
+                flash('Usuario/Contraseña son incorrectos o no existen')
         else:
             # Account doesnt exist or username/password incorrect
-            flash('Usuario Incorecto o no Existe')
+            flash('Usuario/Contraseña son incorrectos o no existen')
  
     return render_template('login.html')
   
