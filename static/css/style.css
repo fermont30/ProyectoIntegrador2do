@@ -2,8 +2,6 @@ body {
   background-color: #435165;
   margin: 0;
 }
-
-
  
 .login-box
  {
@@ -11,7 +9,7 @@ body {
   width: 30%;
   border: 1px solid grey;
   margin-left: 35%;
-  margin-top: 10%;
+  margin-top: 5%; 
   position: relative;
        box-shadow: 21px 12px 24px 10px rgba(0, 0, 0, .5);
        background: #dadada;
@@ -21,8 +19,8 @@ body {
   text-align: center;
   font-family: "vardhana",cursive;
   font-size: 35px;
-  background: linear-gradient(to bottom, #00bfff 0%, #5b6d7c 100%);
-  color:#fff;
+  background: linear-gradient(to bottom, #52727c 0%, #5b6d7c 100%);
+  color:black;
   position: relative;
        box-shadow: 1px 3px 14px  rgba(0, 0, 0, .5);
  }
@@ -31,6 +29,12 @@ body {
   padding: 20px;
   line-height: 2;
  }
+
+ .login-body p
+ {
+   text-align: center;
+ }
+ 
 .msg {
 color: #721c24;
    background-color: #f8d7da;
@@ -69,8 +73,7 @@ input::-webkit-input-placeholder {
    padding-top: 3px;
 }
  
-.main-login{
- background-color: #fff;
+.main-login{ 
    /* shadows and rounded borders */
    -moz-border-radius: 2px;
    -webkit-border-radius: 2px;
@@ -81,7 +84,7 @@ input::-webkit-input-placeholder {
  
 }
 .form-control {
-   height: auto!important;
+height: auto!important;
 padding: 8px 12px !important;
 }
 .input-group {
@@ -89,18 +92,21 @@ padding: 8px 12px !important;
    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
 }
-.main-center{
+.main-center{   
  margin-top: 30px;
  margin: 0 auto;
  max-width: 400px;
    padding: 10px 40px;
-background:#5b6d7c;
-    color: #FFF;
+background:transparent;
+    color:black;
    text-shadow: none;
 -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
 box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
  
+}
+.main-center h5{
+   text-align: center;
 }
 span.input-group-addon i {
    color: #fff;
@@ -123,4 +129,10 @@ text-align: center;
 }
 .site-header a { 
 color:#fff;
+}
+
+.perfil{
+   text-align: center;
+   font-size: large;
+   margin-bottom: 23%;
 }

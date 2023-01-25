@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+            <div class="col-md-3">  
+                <img class="log" src="{{ url_for('static', filename='img/logo/smartcss-logo.png') }}" alt="">       
+                <h3 class="name">SmartCss</h3>
+            </div>
+        </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">              
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Laptops</a></li>
+                        <li><a class="dropdown-item" href="#">CPU's</a></li>
+                        <li><a class="dropdown-item" href="#">Celulares</a></li>
+                        <li><a class="dropdown-item" href="#">Monitores</a></li>
+                    </ul>
+                </li>               
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('acercade') }}">Nosotros</a>
+                </li>                                
+            </ul>                           
+    </div>
+    <div class="col-md-3">
+        <a class="nav-item " href="{{ url_for('index') }}">Inicio</a>
+        <a class="nav-item " href="{{ url_for('profile') }}"> Perfil</a>        
+        {% if 'loggedin' in session %}
+        <a class="nav-item " href="{{ url_for('logout') }}">Cerrar Sesion</a>        
+        {% else %}
+        <a class="nav-item" href="{{ url_for('login') }}">Iniciar Sesion</a>
+        {% endif %}       
+    </div>
+    </div>
+</nav>

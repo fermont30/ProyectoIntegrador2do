@@ -10,7 +10,8 @@
 
 .sticky li {
     list-style-type: none;
-    background: linear-gradient(180deg, rgba(8, 253, 0), rgba(5, 163, 0), rgb(3, 97, 0));
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
     border-radius: 10px;
     color: #efefef;
     height: 43px;

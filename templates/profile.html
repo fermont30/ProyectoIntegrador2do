@@ -1,17 +1,16 @@
-{% extends 'layout.html' %}
-  
-{% block title %}Perfil{% endblock %}
-  
-{% block content %}
+{% extends './base.html' %}
+
+{% block titulo %}<title>Perfil</title>{% endblock %}
+{% block contenido %}
 <h1>Tu Perfil</h1>
-<div>
-    <p>Detalles de tu cuenta:</p>
+<div class="perfil">
+    <h1>Detalles de tu cuenta:</h1>
     <table>
         <tr>
             <td>Nombre:</td>
             <td>{{ account['fullname'] }}</td>
         </tr>
-  <tr>
+        <tr>
             <td>Usuario:</td>
             <td>{{ account['username'] }}</td>
         </tr>

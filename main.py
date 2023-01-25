@@ -1,9 +1,9 @@
-from flask import Flask, request, session, redirect, url_for, render_template, flash
+from flask import Flask, redirect, url_for, render_template, request, flash, session
 import psycopg2 #pip install psycopg2 
 import psycopg2.extras
 import re 
-from werkzeug.security import generate_password_hash, check_password_hash
- 
+from werkzeug.security import generate_password_hash, check_password_hash 
+# creamos instancia de Flask
 app = Flask(__name__)
 app.secret_key = 'cairocoders-ednalan'
  
@@ -11,21 +11,23 @@ host =     'localhost'
 database = 'login'
 username = 'postgres'
 password = '1234'
-port = 5432
+port =      5432
  
 conn = psycopg2.connect(host=host, database=database,
                    user=username, password=password, port=port)
- 
+
 @app.route('/')
-def home():
+def index():
     # Check if user is loggedin
-    if 'loggedin' in session:
+    #if 'loggedin' in session:
     
         # User is loggedin show them the home page
-        return render_template('home.html', username=session['username'])
+        return render_template('index.html')
+        #return render_template('index.html', username=session['username'])
     # User is not loggedin redirect to login page
-    return redirect(url_for('login'))
- 
+    #return redirect(url_for('login')) 
+
+#Login user
 @app.route('/login/', methods=['GET', 'POST'])
 def login():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -51,16 +53,27 @@ def login():
                 session['id'] = account['id']
                 session['username'] = account['username']
                 # Redirect to home page
-                return redirect(url_for('home'))
+                return redirect(url_for('index'))
             else:
                 # Account doesnt exist or username/password incorrect
-                flash('Usuario/Contraseña son incorrectos o no existen')
+                flash('Usuario Incorecto o no Existe')
         else:
             # Account doesnt exist or username/password incorrect
-            flash('Usuario/Contraseña son incorrectos o no existen')
+            flash('Usuario Incorecto o no Existe')
  
     return render_template('login.html')
-  
+
+# Cerrar sesion
+@app.route('/logout')
+def logout():
+    # Remove session data, this will log the user out
+   session.pop('loggedin', None)
+   session.pop('id', None)
+   session.pop('username', None)
+   # Redirect to login page
+   return redirect(url_for('login'))
+
+#Registrar
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
@@ -93,22 +106,22 @@ def register():
             cursor.execute("INSERT INTO users (fullname, username, password, email) VALUES (%s,%s,%s,%s)", (fullname, username, _hashed_password, email))
             conn.commit()
             flash('Estas registrado!')
+            return render_template('login.html')
     elif request.method == 'POST':
         # Form is empty... (no POST data)
         flash('Por favor llena los campos del registro!')
     # Show registration form with message (if any)
     return render_template('register.html')
-   
-   
-@app.route('/logout')
-def logout():
-    # Remove session data, this will log the user out
-   session.pop('loggedin', None)
-   session.pop('id', None)
-   session.pop('username', None)
-   # Redirect to login page
-   return redirect(url_for('login'))
-  
+
+@app.route('/redirecciona')
+@app.route('/redirecciona/<string:sitio>')
+def redirecciona(sitio=None):
+    if sitio is not None:
+        return redirect(url_for('index'))
+    else:
+        return redirect(url_for('acercade'))
+
+#PERFIL
 @app.route('/profile')
 def profile(): 
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)   
@@ -120,6 +133,23 @@ def profile():
         return render_template('profile.html', account=account)
     # User is not loggedin redirect to login page
     return redirect(url_for('login'))
- 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+
+@app.route('/acercade')
+def acercade():    
+    return render_template('acercade.html')
+
+
+@app.route('/condicionybucle')
+def condicionybucle():   
+    return render_template('condicionybucle.html')
+
+
+def pagina_no_encontrada(error):
+    return render_template('errores/404.html'), 404
+
+
+if __name__ == '__main__':
+    app.register_error_handler(404, pagina_no_encontrada)
+    app.secret_key = 'clave-flask'
+    app.run(debug=True, port=5000)
