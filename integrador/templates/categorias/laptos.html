@@ -1,0 +1,155 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+<title>Ordenadores</title>
+{% endblock %}
+
+{% block contenido %} 
+<div class="container-card">
+    <div class="row">
+        <center>
+             <h3 class="itembar"
+            style="color: black; background:aliceblue;">
+            Portatiles</h3>
+        </center>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        Laptop i7 Gaming
+                    </div>
+                    <div class="card-body">                            
+                        <img src="{{ url_for('static', filename='img/productos/1lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        Laptop i3 Dell
+                    </div>
+                    <div class="card-body">                            
+                        <img src="{{ url_for('static', filename='img/productos/3lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        Laptop i3 HP
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/3lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        LAPTOP I7 GAMING MSI
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/4lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        LAPTOP AMD RYZEN 3 HP 15 EF
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/4lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        LAPTOP I7 GAMING MSI KATANA
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/3lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        LAPTOP AMD RYZEN 5 GAMING HP
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/1lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        LAPTOP I5 TUF GAMING ASUS
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/4lap.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div> 
+            <center>
+                <h3 class="itembar"
+                    style="color: black; background:aliceblue;">
+                    Escritorio</h3>
+            </center> 
+            <div class="col-sm-3">
+                <div class="card card-prod">
+                    <div class="card-header">
+                        PC INTEL TACCHI I7
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/5cpu.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod" style="margin-left: 30px;">
+                    <div class="card-header">
+                        PC INTEL OMEGA I5
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/2cpu.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod" style="margin-left: 60px;">
+                    <div class="card-header">
+                        PC INTEL PLUTON I7
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/3cpu.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card card-prod" style="margin-left: 90px;">
+                    <div class="card-header">
+                        PC AMD VENUS RYZEN 5
+                    </div>
+                    <div class="card-body">
+                        <img src="{{ url_for('static', filename='img/productos/4cpu.png') }}" alt="" width="180px" height="200px">
+                        <p class="card-text"><a href="#">Ver</a></p>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>   
+{% endblock %}
+   

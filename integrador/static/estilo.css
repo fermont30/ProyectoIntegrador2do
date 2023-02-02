@@ -1,0 +1,344 @@
+.cabecera {
+    color: white;
+    text-align-last: center;
+}
+
+.ubg {
+    color: white;
+}
+
+.log {
+    position: absolute;
+    top: 1%;
+    width: 40px;
+    height: 45px;
+}
+
+.name {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 22%;
+    left: 5%;
+}
+
+.fondo {
+    width: 100%;
+    background: rgb(232,236,241);
+    background: radial-gradient(circle, rgba(232,236,241,1) 89%, rgba(218,215,216,1) 94%);
+
+    }
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    color: white;
+   background: rgb(12, 12, 12);
+}
+
+.dropdown-menu {
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+}
+.collapse {
+    position: absolute;
+    left: 25%;
+}
+
+/* botones */
+
+.btnI {
+    text-decoration: none;
+    background: #2192FF;
+    width: 120px;
+    border-radius: 50px;
+    position: absolute;
+    left: 670px;
+}
+
+.btnU {
+    text-decoration: none;
+    background: #2192FF;
+    width: 110px;
+    border-radius: 50px;
+    position: absolute;
+    left: 800px;
+}
+
+.btn-3 {    
+    border-radius: 40px;
+    border: 2px solid #000;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+.btn-3:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 black, -10px 10px 25px 0 rgb(55, 0, 255);
+}
+
+/*fin boton*/
+
+.carousel {
+    width: 100%;
+    height: 480px;
+}
+
+
+
+@keyframes rotar {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(80deg);
+    }
+}
+
+/*tarjetas*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Cards*/
+
+.container-card {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    color: #000;
+}
+
+.title-cards {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+}
+
+.card {
+    left: 1%;
+    width: 100%;
+    margin: 20px;
+    border-radius: 40px;
+    overflow: hidden;
+    background-color: aliceblue;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+    
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+}
+
+.card .contenido-card {
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido-card h3 {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.card .contenido-card p {
+    line-height: 1.8;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .container-card {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 15px;
+    }
+}
+
+.ver {
+    color: black;
+    text-decoration: none;
+}
+
+/*Fin-Cards*/
+
+
+.card-prod {
+    width: 90%;
+    align-items: center;
+    color: black;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;   
+}
+
+
+/*tarjetas detalles de productos*/
+
+.card-detalle {
+    width: 500px;
+    height: 400px;
+    color: white;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-especificacion {
+    width: 500px;
+    height: 400px;
+    color: white;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-imgdetalle {
+    width: 500px;
+    height: 400px;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*pie de pagina*/
+.pie-pagina {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+    color: white;
+    text-align-last: center;
+    padding-top: 10px;
+}
+
+.nav-dash {
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-color: black;
+    border-radius: 10px;
+}
+
+.nav-item {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.nav-link {
+    color: rgb(244, 241, 241);
+    text-decoration: none;
+}
+
+.btn {
+    border: 2px solid #000;
+    color:black;
+}
+
+.item {
+    color: red;
+}
+
+.quienes {
+    width: 96%;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.nosot {
+    color: black;
+    text-align: center;
+}
+
+.nosot1 {
+    margin: 20px;
+    color:black;
+    text-align: justify;
+}
+
+.btn-primary {
+    background-color: black;
+    color: red;
+    border-radius: 10px;
+    border-color: red;
+}
+
+.saber-mas {
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    border-radius: 10px;
+}
+
+.servicio {
+    color: black;
+    text-align: center;
+}
+
+.formulario {
+    color: white;
+    height: 350px;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);background: linear-gradient(180deg, rgba(8, 253, 0, 0.788), rgba(5, 163, 0, 0.788), rgb(3, 97, 0));
+    border-radius: 10px;
+}
+
+.formulario1 {
+    color: white;
+    height: 950px;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);background: linear-gradient(180deg, rgba(8, 253, 0, 0.788), rgba(5, 163, 0, 0.788), rgb(3, 97, 0));
+    border-radius: 10px;
+}
+
+.info {
+    color: white;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);    border-radius: 10px;
+}
+
+.tienda1 {
+    width: 469px;
+    height: 350px;
+    color: white;
+    text-align: center;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);}
+
+.menu2 {
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);    border-color: black;
+    border-radius: 10px;
+}
+
+.producto2 {
+    color: white;
+    text-align: center;
+    background: rgb(166,186,191);
+    background: linear-gradient(90deg, rgba(166,186,191,1) 20%, rgba(203,210,206,1) 49%, rgba(207,213,208,1) 52%, rgba(135,149,146,1) 84%);
+    border-radius: 10px;
+}

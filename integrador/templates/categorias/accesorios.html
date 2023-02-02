@@ -1,0 +1,109 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+<title>Accesorios</title>
+{% endblock %}
+
+{% block contenido %} 
+<div class="container-card">
+    <div class="row">
+        <center>
+            <h3 class="itembar"
+                style="color: black; background:aliceblue;">
+                Accesorios</h3>
+        </center>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card card-prod">
+                        <div class="card-header">
+                            Headphone Havic
+                        </div>
+                        <div class="card-body">                            
+                            <img src="{{ url_for('static', filename='img/productos/art1.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 30px;">
+                        <div class="card-header">
+                            Mouse Evga x17
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art2.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 60px;">
+                        <div class="card-header">
+                            Mouse Logiteg G502
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art3.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 90px;">
+                        <div class="card-header">
+                            Mouse Corsair
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art4.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod">
+                        <div class="card-header">
+                            GamePad Pro Msi
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art5.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 30px;">
+                        <div class="card-header">
+                            Teclado mecanico RGB
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art6.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 60px;">
+                        <div class="card-header">
+                            Headphone Logiteg G335
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art7.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card card-prod" style="margin-left: 90px;">
+                        <div class="card-header">
+                            Mouse Scorpio
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ url_for('static', filename='img/productos/art8.jpeg') }}" alt="" width="180px" height="200px">
+                            <p class="card-text"><a href="#">Ver</a></p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+<title>Servicios</title>
+{% endblock %}
+
+{% block contenido %}  
+    <div class="servicio">
+        <h3 style="color: white;">Te Ofrecemos</h3>
+        <div class="row">
+            <div class="col-xs-10 col-sm-6 col-md-4">
+                <div class="card producto2" style="height: 500px">
+                    <img class="centrado" alt="servicios" src="{{ url_for('static', filename='img/Servicios/serv-mantenimiento.png') }}">
+                    <h3>Servicio de mantenimineto</h3>
+                    <a href="#" class="link-dark">Saber Mas</a>
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-6 col-md-4">
+                <div class="card producto2" style="height: 500px">
+                    <img class="centrado" src="{{ url_for('static', filename='img/Servicios/serv-personalizacion.png') }}" alt="PC Gaming">
+                    <h3>Servicio de personalización</h3>
+                    <a href="#" class="link-dark">Saber Mas</a>
+                </div>
+            </div>
+            <div class="col-xs-10 col-sm-6 col-md-4">
+                <div class="card producto2" style="height: 500px">
+                    <img class="centrado" src="{{ url_for('static', filename='img/Servicios/serv-entrega.png') }}" alt="PC Gaming">
+                    <h3>Servicio de entrega a domicilio</h3>
+                    <a href="#" class="link-dark">Saber Mas</a>
+                </div>
+            </div>
+        </div>
+        <br>        
+    </div>
+{% endblock %}
+    
+    
+    
+
+<

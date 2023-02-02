@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+{% block titulo %}
+<title>Nosotros</title>
+{% endblock %}
+
+{% block contenido %}
+<div class="mx-auto" style="width: 1000px;"> 
+     <img  src="{{ url_for('static', filename='img/index/nosotros.jpg') }}">
+</div> 
+<br>
+ <!--Quienes Somos--> 
+<div class="mx-auto" style="width: 1000px;">
+         <div class="quienes">
+        <h2 class="nosot">Quienes Somos</h2>
+        <h3 class="nosot1">Somos un equipo se encuentra motivado por servir con excelencia a nuestros
+                clientes y
+                a
+                entregar lo mejor de sí en cada una de las áreas.
+                Mantenemos desde nuestros inicios al cliente como el centro de todas nuestras acciones.
+                <br>
+                Nuestro negocio está fuertemente influenciado por la innovación y el avance tecnológico
+                continuo,
+                logrando
+                cumplir las expectativas de cada uno de nuestros clientes.
+        </h3>
+        <center>
+            <a class="btn btn-3" href="#">Saber mas</a>
+        </center        
+ </div>
+</div>  
+<br>  
+{% endblock %}
