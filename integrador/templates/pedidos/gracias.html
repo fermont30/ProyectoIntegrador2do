@@ -1,0 +1,34 @@
+{% extends './base.html' %}
+
+{% block titulo %}<title>GRACIAS</title>{% endblock %}
+{% block body %}
+<div>        
+    <center>
+        <div class="col col-md-6">
+            <div class="card bg-light text-grey" style="border-radius: 1rem;">
+                <div class="card-header">
+                   GRACIAS POR PREFERIRNOS
+                </div>              
+                <div class="card-body">
+                  <form>
+                    <div class="mb-3">
+                        <label class="form-label">Tu pedido Fue realizado con exito</label>                       
+                    </div>                 
+                    <div class="mb-2">                       
+                       <h1> cliente :{{ usuarios['fullname'] }}</h1></td>
+                       <p>favor acercate a uno de nuestros locales mas cercanos</p>                    
+                    </div>                        
+                    <div class="mb-3">
+                        <button class="btn btn-outline-secondary text-dark"><a class="ver" style="text-decoration: none;" href="{{ url_for('pedidos.index') }}">MAS PEDIDOS</a></button>
+                    </div>
+                  </form>
+                    <div class="card-footer text-muted">                       
+                        <button class="btn btn-outline-secondary text-dark"><a style="text-decoration: none;" class="ver" href="{{ url_for('index') }}">Inicio</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</div>
+<br><br><br><br><br><br>
+{% endblock %}
